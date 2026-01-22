@@ -8,21 +8,21 @@ Each module is in a separate folder, containing one or more Jupyter notebooks. I
 
 ## Contents
 - [Incubator Digital Twin Course](#incubator-digital-twin-course)
-  - [Contents](#contents)
-  - [Questions and Issues](#questions-and-issues)
-  - [Pre-Requisites](#pre-requisites)
-    - [Git](#git)
-    - [Python](#python)
-    - [VSCode](#vscode)
-    - [Jupyter](#jupyter)
-    - [Jupyter VSCode Extension](#jupyter-vscode-extension)
-    - [Docker](#docker)
-    - [RabbitMQ](#rabbitmq)
-    - [InfluxDB](#influxdb)
-  - [Course Organization and Activities Index](#course-organization-and-activities-index)
-  - [Repository Maintenance](#repository-maintenance)
-  - [Frequently Asked Questions](#frequently-asked-questions)
-    - [Example question](#example-question)
+   - [Contents](#contents)
+   - [Questions and Issues](#questions-and-issues)
+   - [Pre-Requisites](#pre-requisites)
+      - [Git](#git)
+      - [Python](#python)
+      - [VSCode](#vscode)
+      - [Jupyter](#jupyter)
+      - [Jupyter VSCode Extension](#jupyter-vscode-extension)
+      - [Docker](#docker)
+      - [RabbitMQ](#rabbitmq)
+      - [InfluxDB](#influxdb)
+   - [Course Organization and Activities Index](#course-organization-and-activities-index)
+   - [Repository Maintenance](#repository-maintenance)
+   - [Frequently Asked Questions](#frequently-asked-questions)
+      - [Example question](#example-question)
 
 ## Questions and Issues
 
@@ -54,7 +54,7 @@ We assume the reader is familiar with the following tools (material are provided
    2. For mac, we recommend: 
       1. https://docs.github.com/en/desktop/installing-and-authenticating-to-github-desktop/installing-github-desktop
    3. For Linux, we recommend:
-      1. TODO
+      1. https://code.visualstudio.com/docs/sourcecontrol/github
 
 **Tutorial:** https://github.com/git-guides
 
