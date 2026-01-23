@@ -1,4 +1,4 @@
-# Introduction to the Terminal and the Notion of Processes (PowerShell and Linux Shell Edition)
+# Introduction to the Terminal and the Notion of Processes (PowerShell and Linux/MacOS Shell Edition)
 
 Throughout these tutorial materials you will often have to run processes, so follow the instructions below carefully and use the web to learn more about them.
 
@@ -7,7 +7,7 @@ Throughout these tutorial materials you will often have to run processes, so fol
 The **terminal** (also known as the command line or shell) is a text-based interface that allows you to interact with your computer by typing commands.
 
 - In **Windows**, the terminal is usually **PowerShell**.
-- In **Linux**, the terminal uses shells like **bash** or **zsh**.
+- In **Linux/MacOS**, the terminal uses shells like **bash** or **zsh**.
 
 It lets you **navigate folders**, **run programs as processes**, and **manage files**.
 
@@ -19,15 +19,15 @@ Open your terminal application and execute the following commands along.
 # Show current directory
 # PowerShell:
 pwd
-# Linux:
+# Linux/MacOS:
 pwd
 ```
 
 ```powershell
-# Change to a specific directory (for example, Documents)
+# Change to a specific directory (for example, Downloads)
 # PowerShell:
 Set-Location -Path "$HOME\Downloads"
-# Linux:
+# Linux/MacOS:
 cd ~/Downloads
 ```
 
@@ -35,7 +35,7 @@ cd ~/Downloads
 # List files and folders
 # PowerShell:
 Get-ChildItem
-# Linux:
+# Linux/MacOS:
 ls
 ```
 
@@ -43,7 +43,7 @@ ls
 # Make a new folder called "my_folder"
 # PowerShell:
 New-Item -ItemType Directory -Name "my_folder"
-# Linux:
+# Linux/MacOS:
 mkdir my_folder
 ```
 
@@ -51,7 +51,7 @@ mkdir my_folder
 # Check that it was created
 # PowerShell:
 Get-ChildItem
-# Linux:
+# Linux/MacOS:
 ls
 ```
 
@@ -59,7 +59,7 @@ ls
 # Remove the folder
 # PowerShell:
 Remove-Item -Recurse -Force .\my_folder
-# Linux:
+# Linux/MacOS:
 rm -r my_folder
 ```
 
@@ -110,7 +110,7 @@ Let's explore processes by running two Python scripts at the same time in differ
      ```
      (in another terminal)
 
-   - In **Linux**, use:
+   - In **Linux/MacOS**, use:
      ```bash
      python3 script1.py
      ```
@@ -126,7 +126,7 @@ Let's explore processes by running two Python scripts at the same time in differ
      ```powershell
      Get-Process | Where-Object { $_.Name -like "*python*" }
      ```
-   - Linux:
+   - Linux/MacOS:
      ```bash
      ps aux | grep python
      ```
@@ -179,24 +179,24 @@ To do this, simply prefix the command with an exclamation mark `!`.
 
 ```python
 # List files in the current directory
-!ls              # Linux
+!ls              # Linux/MacOS
 !Get-ChildItem   # PowerShell (Windows)
 ```
 
 ```python
 # Check current working directory
-!pwd             # Linux or PowerShell
+!pwd             # Linux/MacOS or PowerShell
 ```
 
 ```python
 # Create a folder
-!mkdir test_folder        # Linux
+!mkdir test_folder        # Linux/MacOS
 !New-Item -ItemType Directory -Name "test_folder"  # PowerShell
 ```
 
 ```python
 # Remove a folder
-!rm -r test_folder        # Linux
+!rm -r test_folder        # Linux/MacOS
 !Remove-Item -Recurse -Force .\test_folder  # PowerShell
 ```
 

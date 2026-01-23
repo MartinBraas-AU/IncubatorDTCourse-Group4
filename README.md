@@ -63,12 +63,13 @@ We assume the reader is familiar with the following tools (material are provided
 We will use python as the main programming language for creating the digital twin, due to its wide usage, versatility, and excellent library support.
 
 **Installation:** 
-1. Use [Python 3.11](https://www.python.org/) as minimum version. We recommend to install the latest python version, and revert to the suggested version if you face problems.
-2. Install the python dependencies declared in the [requirements.txt](requirements.txt) file. Run `pip install -r requirements.txt`
+1. Use [Python 3.14](https://www.python.org/) as minimum version. We recommend to install the latest python version, and revert to the suggested version if you face problems.
+2. We recommend creating a virtual environment for this repository, where all dependencies will be installed. Run `python -m venv venv` or equivalent to create a virtual environment. All the python commands presented in the documentation assume you've activated the virtual environment.
+3. Install the python dependencies declared in the [requirements.txt](requirements.txt) file. Run `pip install -r requirements.txt`
 
 **Tutorial:** 
-1. https://docs.python.org/3.11/tutorial/index.html
-2. Learn about virtual environments and the pip package manager to install python packages: https://docs.python.org/3.11/tutorial/venv.html
+1. https://docs.python.org/3.14/tutorial/index.html
+2. Learn about virtual environments and the pip package manager to install python packages: https://docs.python.org/3.14/tutorial/venv.html
 
 ### VSCode
 
