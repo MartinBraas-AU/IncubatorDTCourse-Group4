@@ -1,5 +1,5 @@
 ## 0. Terminal & Processes (`0-TerminalAndProcesses.md`)
-test
+
 ### A. Basic terminal fluency
 
 1. Navigate to a directory of your choice using the terminal.
