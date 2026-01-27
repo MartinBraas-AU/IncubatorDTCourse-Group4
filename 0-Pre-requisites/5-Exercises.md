@@ -147,7 +147,7 @@ What happens if one consumer is much slower than the other?
 What happens if the script crashes and restarts?
 
 
-## 5. Integration exercises (capstone-style)
+## 5. Integration exercises
 
 ### A. Docker + Python
 
