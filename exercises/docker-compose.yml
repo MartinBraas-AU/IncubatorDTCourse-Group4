@@ -15,20 +15,39 @@ services:
       - "8086:8086"
     volumes:
       - influxdb2:/var/lib/influxdb2
+    environment:
+      DOCKER_INFLUXDB_INIT_MODE: setup
+      DOCKER_INFLUXDB_INIT_USERNAME: admin
+      DOCKER_INFLUXDB_INIT_PASSWORD: password123
+      DOCKER_INFLUXDB_INIT_ORG: ${INFLUX_ORG}
+      DOCKER_INFLUXDB_INIT_BUCKET: ${INFLUX_BUCKET}
+      DOCKER_INFLUXDB_INIT_ADMIN_TOKEN: ${INFLUX_TOKEN}
 
-  consumer:
-    build: ./B_consumer
+  producer:
+    build: ./producer
     depends_on:
       rabbitmq:
         condition: service_healthy
     environment:
       PYTHONUNBUFFERED: "1"
       RABBITMQ_HOST: rabbitmq
-      QUEUE_NAME: sensor_queue
+      QUEUE_NAME: ${QUEUE_NAME}
 
+  consumer:
+    build: ./consumer
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+      influxdb:
+        condition: service_started
+    environment:
+      PYTHONUNBUFFERED: "1"
+      RABBITMQ_HOST: rabbitmq
+      QUEUE_NAME: ${QUEUE_NAME}
       INFLUX_URL: http://influxdb:8086
       INFLUX_TOKEN: ${INFLUX_TOKEN}
       INFLUX_ORG: ${INFLUX_ORG}
       INFLUX_BUCKET: ${INFLUX_BUCKET}
+
 volumes:
   influxdb2:
